@@ -4,8 +4,6 @@ const path = require('path');
 const program = require('commander');
 const { Source, buildSchema } = require('graphql');
 const del = require('del');
-let catch_ = false
-let count = 0;
 
 program
   .option('--schemaFilePath [value]', 'path of your graphql schema file')
@@ -53,7 +51,7 @@ function generateQuery(curName, curParentType) {
    * @param level current depth level of the current field
    */
   function generateFieldData(name, parentType, parentFields, level) {
-    // console.log('Generating query for ', name, parentType);
+    console.log('Generating fragment for ', name, parentType);
 
     const tabSize = 4;
     const field = gqlSchema.getType(parentType).getFields()[name];
@@ -66,7 +64,6 @@ function generateQuery(curName, curParentType) {
     //level == 1 ? 'catch' : 
     let fieldStr = ' '.repeat(level * tabSize) + level == 1 ? '' : field.name;
 
-    // console.log(fieldStr)
 
 
     // If the field has arguments, add them
@@ -141,12 +138,6 @@ function generateQuery(curName, curParentType) {
             return acc;
           }
 
-          if (count < 20) {
-            // if (innerFieldsData.indexOf('speciality')> -1)
-            //   console.log(acc)
-
-            // count++;
-          }
 
           // Join all the fields together
           return `${acc}\n${curInnerFieldStr}`;
@@ -156,21 +147,6 @@ function generateQuery(curName, curParentType) {
 
     // Add the inner fields with braces if available
     if (innerFieldsData) {
-      // if (count < 1500) {
-      //   if (innerFieldsData.indexOf('speciality')> -1)
-      //     // console.log('------ catch -----', innerFieldsData, "------ catch -----")
-
-
-      //   // console.log('------ start -----', innerFieldsData, "------ end -----")
-      //   count++;
-      // }
-
-      if (count < 15) {
-        // if (fieldStr.startsWith('catch') > -1)
-        console.log(fieldStr + '--')
-
-        count++;
-      }
 
       if (fieldStr != '') {
         fieldStr += `{\n${innerFieldsData}\n`;

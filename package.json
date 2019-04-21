@@ -1,45 +1,17 @@
 {
-  "_from": "gql-generator",
-  "_id": "gql-generator@1.0.5",
-  "_inBundle": false,
-  "_integrity": "sha512-/R7HnPLejR9+h0Mg09KqyE9gscepsOh+d0r0c3Z1cquje+cUeFsT1QoeF6qPI11P/5do09zE6fRDf7exmbh0Hg==",
-  "_location": "/gql-generator",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "gql-generator",
-    "name": "gql-generator",
-    "escapedName": "gql-generator",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+  "name": "gql-fragments-generator",
+  "version": "1.0.3",
+  "description": "create fragments from graphql schema",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
   },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/gql-generator/-/gql-generator-1.0.5.tgz",
-  "_shasum": "d7cdb7c12c2f0665b9202fe00d8974100e08a47b",
-  "_spec": "gql-generator",
-  "_where": "C:\\Users\\Hasan",
-  "author": {
-    "name": "timqian"
-  },
-  "bin": {
-    "gqlg": "index.js"
-  },
-  "bugs": {
-    "url": "https://github.com/timqian/gql-generator/issues"
-  },
-  "bundleDependencies": false,
   "dependencies": {
     "commander": "^2.15.1",
     "del": "^3.0.0",
     "graphql": "^0.13.2"
   },
-  "deprecated": false,
-  "description": "Generate queries from graphql schema, used for writing api test.",
   "devDependencies": {
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -47,22 +19,26 @@
     "mocha": "^5.0.5",
     "should": "^13.2.1"
   },
-  "homepage": "https://github.com/timqian/gql-generator#readme",
-  "keywords": [
-    "graphql",
-    "query",
-    "generator"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "name": "gql-generator",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timqian/gql-generator.git"
-  },
   "scripts": {
     "lint": "eslint ./src",
     "test": "mocha -u qunit"
   },
-  "version": "1.0.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hasan-git/gql-fragments-generator.git"
+  },
+  "keywords": [
+    "graphql",
+    "fragments",
+    "generate"
+  ],
+  "author": "Hasan",
+  "bin": {
+    "gqlgfrag": "index.js"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hasan-git/gql-fragments-generator/issues"
+  },
+  "homepage": "https://github.com/Hasan-git/gql-fragments-generator#readme"
 }
