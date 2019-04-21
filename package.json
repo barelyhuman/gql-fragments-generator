@@ -1,6 +1,6 @@
 {
   "name": "gql-fragments-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "create fragments from graphql schema",
   "main": "index.js",
   "directories": {
