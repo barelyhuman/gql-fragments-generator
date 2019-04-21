@@ -51,7 +51,6 @@ function generateQuery(curName, curParentType) {
    * @param level current depth level of the current field
    */
   function generateFieldData(name, parentType, parentFields, level) {
-    console.log('Generating fragment for ', name, parentType);
 
     const tabSize = 4;
     const field = gqlSchema.getType(parentType).getFields()[name];
@@ -260,4 +259,4 @@ if (gqlSchema.getQueryType()) {
 //   console.log('[gqlg warning]:', 'No subscription type found in your schema');
 // }
 
-fs.writeFileSync(path.join(destDirPath, 'index.js'), indexJsExportAll);
+// fs.writeFileSync(path.join(destDirPath, 'index.js'), indexJsExportAll);
