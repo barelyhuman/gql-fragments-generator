@@ -18,15 +18,14 @@ type User {
 ```
 
 ```gql
-# Sample query generated
-query user($id: Int!) {
-  user(id: $id){
+# Sample fragment generated
+  fragment user on user{
     id
     username
     email
     createdAt
   }
-}
+
 ```
 
 ## Usage
@@ -37,37 +36,22 @@ npm install gql-fragment-generator -g
 # see the usage
 gqlgfrag --help
 
-# Generate sample queries from schema file
+# Generate sample fragments from schema file
 gqlgfrag --schemaFilePath ./example/sampleTypeDef.graphql --destDirPath ./example/output
 ```
 
-Now the queries generated from the [`sampleTypeDef.graphql`](./example/sampleTypeDef.graphql) can be found in the destDir: [`./example/output`](./example/output).
+Now the fragments are generated from the [`sampleTypeDef.graphql`](./example/sampleTypeDef.graphql) can be found in the destDir: [`./example/output`](./example/output).
 
-This tool generate 3 folders holding the queries: mutations, queries and subscriptions. And also `index.js` files to export the queries in each folder.
+This tool generate 1 folder holding the fragments. 
 
-You can require the queries like this:
+You can require the fragment like this:
 
 ```js
-// require all the queries
-const queries = require('./example/output');
-// require mutations only
-const mutations = require('./example/output/mutations');
+const userFragment = require('graphql-tag/loader!./generated/fragments/user.gql');
 
+/
 // sample content
-console.log(queries.mutations.signup);
-console.log(mutations.signup);
-/*
-mutation signup($username: String!, email: String!, password: String!){
-  signup(username: $username, email: $email, password: $password){
-    token
-    user {
-      id
-      username
-      email
-      createdAt
-    }
-  }
-}
-*/
+console.log(userFragment);
+
 
 ```
