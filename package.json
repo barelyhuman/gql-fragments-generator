@@ -24,7 +24,8 @@
 	},
 	"scripts": {
 		"test": "mocha -u qunit",
-		"fix": "prettier --write"
+		"fix": "prettier --write",
+		"next": "bumpp --commit --tag"
 	},
 	"files": [
 		"src"
@@ -37,6 +38,7 @@
 	},
 	"devDependencies": {
 		"@barelyhuman/prettier-config": "^0.1.0",
+		"bumpp": "^7.1.1",
 		"mocha": "^5.0.5",
 		"should": "^13.2.1"
 	},
