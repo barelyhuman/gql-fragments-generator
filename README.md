@@ -1,57 +1,48 @@
-# gql-fragment-generator
+# gqlfragments
 
-Generate fragments from graphql schema
+Generate fragments from your graphql schema's custom scalars
+
+The base concept was forked from [Hasan-git/gql-fragments-generator](https://github.com/Hasan-git/gql-fragments-generator) and was modified to match my use case.
 
 ## Example
+
 ```gql
 # Sample schema
-type Query {
-  user(id: Int!): User!
-}
-
 type User {
-  id: Int!
-  username: String!
-  email: String!
-  createdAt: String!
+	id: Int!
+	username: String!
+	email: String!
+	createdAt: String!
+	projects: [Project!]
 }
 ```
 
 ```gql
-# Sample fragment generated
-  fragment user on user{
-    id
-    username
-    email
-    createdAt
-  }
-
+# fragment generated
+# - fields are sorted by their lengths
+# - subsets are not added to fragments , eg `projects` is missing here
+fragment UserFields on User {
+	id
+	email
+	username
+	createdAt
+}
 ```
 
 ## Usage
+
 ```bash
 # Install
-npm install gql-fragment-generator -g
+npm install @barelyhuman/gqlfragments -g
 
 # see the usage
-gqlgfrag --help
+gqlfragments --help
 
-# Generate sample fragments from schema file
-gqlgfrag --schemaFilePath ./example/sampleTypeDef.graphql --destDirPath ./example/output
+# Generate fragments from schema file
+gqlfragments --schema ./example/schema.gql --out ./example/output
 ```
 
-Now the fragments are generated from the [`sampleTypeDef.graphql`](./example/sampleTypeDef.graphql) can be found in the destDir: [`./example/output`](./example/output).
+## License
 
-This tool generate 1 folder holding the fragments. 
-
-You can require the fragment like this:
-
-```js
-const userFragment = require('graphql-tag/loader!./generated/fragments/user.gql');
-
-/
-// sample content
-console.log(userFragment);
-
-
-```
+[MIT](/LICENSE) 2022 [Reaper](github.com/barelyhuman)  
+[ISC](/LICENSE) [Hasan-git](github.com/Hasan-git)
