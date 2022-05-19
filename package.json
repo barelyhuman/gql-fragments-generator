@@ -1,6 +1,6 @@
 {
 	"name": "@barelyhuman/gqlfragments",
-	"version": "0.1.0",
+	"version": "0.1.1-beta.1",
 	"description": "create fragments from graphql schema",
 	"keywords": [
 		"graphql",
