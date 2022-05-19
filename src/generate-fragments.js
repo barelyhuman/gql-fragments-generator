@@ -7,7 +7,8 @@ const {readSchema} = require('./lib/read-schema')
 const {toTitleCase} = require('./lib/to-title-case')
 const {format} = require('./lib/format')
 
-const {definitionTypesToIgnore, genericGraphQLTypes} = require('./constants')
+const {genericGraphQLTypes} = require('./constants')
+const {checkNestedDefinitions} = require('./lib/check-nested')
 
 function generateFragments({schema, out, clean} = {}) {
 	const gqlSchema = readSchema(schema)
@@ -28,37 +29,14 @@ function generateFragments({schema, out, clean} = {}) {
 				return
 			}
 
+			if (typeDefintion.astNode.kind === 'InputObjectTypeDefinition') return
+
 			let scalarFields = Object.keys(typeDefintion._fields)
 			const toRemove = []
 			scalarFields.forEach((field, index) => {
 				const fields = typeDefintion._fields
 
-				if (
-					fields[field].type &&
-					fields[field].type.astNode &&
-					definitionTypesToIgnore.indexOf(fields[field].type.astNode.kind) > -1
-				) {
-					toRemove.push(index)
-				}
-
-				if (
-					fields[field].type.ofType &&
-					fields[field].type.ofType.astNode &&
-					definitionTypesToIgnore.indexOf(
-						fields[field].type.ofType.astNode.kind,
-					) > -1
-				) {
-					toRemove.push(index)
-				}
-
-				if (
-					fields[field].type.ofType &&
-					fields[field].type.ofType.ofType &&
-					fields[field].type.ofType.ofType.astNode &&
-					definitionTypesToIgnore.indexOf(
-						fields[field].type.ofType.ofType.astNode.kind,
-					) > -1
-				) {
+				if (checkNestedDefinitions(fields[field])) {
 					toRemove.push(index)
 				}
 			})

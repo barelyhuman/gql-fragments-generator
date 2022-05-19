@@ -24,38 +24,6 @@ fragment ActivityCountAggregateFields on ActivityCountAggregate {
 	updatedAt
 }
 
-fragment ActivityCreateInputFields on ActivityCreateInput {
-	action
-	createdAt
-	updatedAt
-}
-
-fragment ActivityCreateManyInputFields on ActivityCreateManyInput {
-	id
-	action
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment ActivityCreateManyUserInputFields on ActivityCreateManyUserInput {
-	id
-	action
-	createdAt
-	updatedAt
-}
-
-fragment ActivityCreateManyUserInputEnvelopeFields on ActivityCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment ActivityCreateWithoutUserInputFields on ActivityCreateWithoutUserInput {
-	action
-	createdAt
-	updatedAt
-}
-
 fragment ActivityGroupByFields on ActivityGroupBy {
 	id
 	action
@@ -81,22 +49,6 @@ fragment ActivityMinAggregateFields on ActivityMinAggregate {
 fragment ActivitySumAggregateFields on ActivitySumAggregate {
 	id
 	userId
-}
-
-fragment ActivityUpdateInputFields on ActivityUpdateInput {
-	action
-}
-
-fragment ActivityUpdateManyMutationInputFields on ActivityUpdateManyMutationInput {
-	action
-}
-
-fragment ActivityUpdateWithoutUserInputFields on ActivityUpdateWithoutUserInput {
-	action
-}
-
-fragment ActivityWhereUniqueInputFields on ActivityWhereUniqueInput {
-	id
 }
 
 fragment AddressFields on Address {
@@ -131,89 +83,6 @@ fragment AddressCountAggregateFields on AddressCountAggregate {
 	userId
 	zipcode
 	countryId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateInputFields on AddressCreateInput {
-	lat
-	lng
-	city
-	street
-	zipcode
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateManyCountryInputFields on AddressCreateManyCountryInput {
-	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateManyCountryInputEnvelopeFields on AddressCreateManyCountryInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment AddressCreateManyInputFields on AddressCreateManyInput {
-	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateManyUserInputFields on AddressCreateManyUserInput {
-	id
-	lat
-	lng
-	city
-	street
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateManyUserInputEnvelopeFields on AddressCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment AddressCreateWithoutCountryInputFields on AddressCreateWithoutCountryInput {
-	lat
-	lng
-	city
-	street
-	zipcode
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressCreateWithoutUserInputFields on AddressCreateWithoutUserInput {
-	lat
-	lng
-	city
-	street
-	zipcode
 	createdAt
 	deletedAt
 	updatedAt
@@ -269,24 +138,8 @@ fragment AddressSumAggregateFields on AddressSumAggregate {
 	countryId
 }
 
-fragment AddressWhereUniqueInputFields on AddressWhereUniqueInput {
-	id
-}
-
 fragment AffectedRowsOutputFields on AffectedRowsOutput {
 	count
-}
-
-fragment BoolFieldUpdateOperationsInputFields on BoolFieldUpdateOperationsInput {
-	set
-}
-
-fragment BoolFilterFields on BoolFilter {
-	equals
-}
-
-fragment BoolWithAggregatesFilterFields on BoolWithAggregatesFilter {
-	equals
 }
 
 fragment CommentFields on Comment {
@@ -306,38 +159,6 @@ fragment CommentCountAggregateFields on CommentCountAggregate {
 	id
 	_all
 	userId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment CommentCreateInputFields on CommentCreateInput {
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment CommentCreateManyInputFields on CommentCreateManyInput {
-	id
-	userId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment CommentCreateManyUserInputFields on CommentCreateManyUserInput {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment CommentCreateManyUserInputEnvelopeFields on CommentCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment CommentCreateWithoutUserInputFields on CommentCreateWithoutUserInput {
 	createdAt
 	deletedAt
 	updatedAt
@@ -372,14 +193,9 @@ fragment CommentSumAggregateFields on CommentSumAggregate {
 	userId
 }
 
-fragment CommentWhereUniqueInputFields on CommentWhereUniqueInput {
-	id
-}
-
 fragment CountryFields on Country {
 	id
 	name
-	address
 	createdAt
 	shortCode
 	updatedAt
@@ -396,28 +212,6 @@ fragment CountryCountFields on CountryCount {
 fragment CountryCountAggregateFields on CountryCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	shortCode
-	updatedAt
-}
-
-fragment CountryCreateInputFields on CountryCreateInput {
-	name
-	createdAt
-	shortCode
-	updatedAt
-}
-
-fragment CountryCreateManyInputFields on CountryCreateManyInput {
-	id
-	name
-	createdAt
-	shortCode
-	updatedAt
-}
-
-fragment CountryCreateWithoutAddressInputFields on CountryCreateWithoutAddressInput {
 	name
 	createdAt
 	shortCode
@@ -452,59 +246,6 @@ fragment CountrySumAggregateFields on CountrySumAggregate {
 	id
 }
 
-fragment CountryUpdateOneWithoutAddressInputFields on CountryUpdateOneWithoutAddressInput {
-	delete
-	disconnect
-}
-
-fragment CountryWhereUniqueInputFields on CountryWhereUniqueInput {
-	id
-}
-
-fragment DateTimeFieldUpdateOperationsInputFields on DateTimeFieldUpdateOperationsInput {
-	set
-}
-
-fragment DateTimeFilterFields on DateTimeFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment DateTimeNullableFilterFields on DateTimeNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment DateTimeNullableWithAggregatesFilterFields on DateTimeNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment DateTimeWithAggregatesFilterFields on DateTimeWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
 fragment DomainFields on Domain {
 	id
 	name
@@ -521,23 +262,6 @@ fragment DomainAvgAggregateFields on DomainAvgAggregate {
 fragment DomainCountAggregateFields on DomainCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
-
-fragment DomainCreateInputFields on DomainCreateInput {
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
-
-fragment DomainCreateManyInputFields on DomainCreateManyInput {
-	id
 	name
 	createdAt
 	deletedAt
@@ -576,10 +300,6 @@ fragment DomainSumAggregateFields on DomainSumAggregate {
 	id
 }
 
-fragment DomainWhereUniqueInputFields on DomainWhereUniqueInput {
-	id
-}
-
 fragment EducationFields on Education {
 	id
 	to
@@ -609,66 +329,6 @@ fragment EducationCountAggregateFields on EducationCountAggregate {
 	grade
 	degree
 	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
-
-fragment EducationCreateInputFields on EducationCreateInput {
-	to
-	from
-	field
-	grade
-	degree
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
-
-fragment EducationCreateManyInputFields on EducationCreateManyInput {
-	id
-	to
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
-
-fragment EducationCreateManyUserInputFields on EducationCreateManyUserInput {
-	id
-	to
-	from
-	field
-	grade
-	degree
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
-
-fragment EducationCreateManyUserInputEnvelopeFields on EducationCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment EducationCreateWithoutUserInputFields on EducationCreateWithoutUserInput {
-	to
-	from
-	field
-	grade
-	degree
 	createdAt
 	deletedAt
 	institute
@@ -726,17 +386,12 @@ fragment EducationSumAggregateFields on EducationSumAggregate {
 	userId
 }
 
-fragment EducationWhereUniqueInputFields on EducationWhereUniqueInput {
-	id
-}
-
 fragment EmploymentTypeFields on EmploymentType {
 	id
 	name
 	createdAt
 	deletedAt
 	updatedAt
-	Experience
 }
 
 fragment EmploymentTypeAvgAggregateFields on EmploymentTypeAvgAggregate {
@@ -750,28 +405,6 @@ fragment EmploymentTypeCountFields on EmploymentTypeCount {
 fragment EmploymentTypeCountAggregateFields on EmploymentTypeCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment EmploymentTypeCreateInputFields on EmploymentTypeCreateInput {
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment EmploymentTypeCreateManyInputFields on EmploymentTypeCreateManyInput {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment EmploymentTypeCreateWithoutExperienceInputFields on EmploymentTypeCreateWithoutExperienceInput {
 	name
 	createdAt
 	deletedAt
@@ -803,10 +436,6 @@ fragment EmploymentTypeMinAggregateFields on EmploymentTypeMinAggregate {
 }
 
 fragment EmploymentTypeSumAggregateFields on EmploymentTypeSumAggregate {
-	id
-}
-
-fragment EmploymentTypeWhereUniqueInputFields on EmploymentTypeWhereUniqueInput {
 	id
 }
 
@@ -846,122 +475,6 @@ fragment ExperienceCountAggregateFields on ExperienceCountAggregate {
 	description
 	organization
 	employmentTypeId
-}
-
-fragment ExperienceCreateInputFields on ExperienceCreateInput {
-	to
-	from
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-}
-
-fragment ExperienceCreateManyEmploymentTypeInputFields on ExperienceCreateManyEmploymentTypeInput {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-}
-
-fragment ExperienceCreateManyEmploymentTypeInputEnvelopeFields on ExperienceCreateManyEmploymentTypeInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment ExperienceCreateManyInputFields on ExperienceCreateManyInput {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceCreateManyRoleInputFields on ExperienceCreateManyRoleInput {
-	id
-	to
-	from
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceCreateManyRoleInputEnvelopeFields on ExperienceCreateManyRoleInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment ExperienceCreateManyUserInputFields on ExperienceCreateManyUserInput {
-	id
-	to
-	from
-	roleId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceCreateManyUserInputEnvelopeFields on ExperienceCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment ExperienceCreateWithoutEmploymentTypeInputFields on ExperienceCreateWithoutEmploymentTypeInput {
-	to
-	from
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-}
-
-fragment ExperienceCreateWithoutRoleInputFields on ExperienceCreateWithoutRoleInput {
-	to
-	from
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-}
-
-fragment ExperienceCreateWithoutUserInputFields on ExperienceCreateWithoutUserInput {
-	to
-	from
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
 }
 
 fragment ExperienceGroupByFields on ExperienceGroupBy {
@@ -1015,7 +528,6 @@ fragment ExperienceRoleFields on ExperienceRole {
 	createdAt
 	deletedAt
 	updatedAt
-	Experience
 }
 
 fragment ExperienceRoleAvgAggregateFields on ExperienceRoleAvgAggregate {
@@ -1029,28 +541,6 @@ fragment ExperienceRoleCountFields on ExperienceRoleCount {
 fragment ExperienceRoleCountAggregateFields on ExperienceRoleCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ExperienceRoleCreateInputFields on ExperienceRoleCreateInput {
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ExperienceRoleCreateManyInputFields on ExperienceRoleCreateManyInput {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ExperienceRoleCreateWithoutExperienceInputFields on ExperienceRoleCreateWithoutExperienceInput {
 	name
 	createdAt
 	deletedAt
@@ -1085,87 +575,11 @@ fragment ExperienceRoleSumAggregateFields on ExperienceRoleSumAggregate {
 	id
 }
 
-fragment ExperienceRoleWhereUniqueInputFields on ExperienceRoleWhereUniqueInput {
-	id
-}
-
 fragment ExperienceSumAggregateFields on ExperienceSumAggregate {
 	id
 	roleId
 	userId
 	employmentTypeId
-}
-
-fragment ExperienceWhereUniqueInputFields on ExperienceWhereUniqueInput {
-	id
-}
-
-fragment FloatNullableFilterFields on FloatNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment FloatNullableWithAggregatesFilterFields on FloatNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment IntFieldUpdateOperationsInputFields on IntFieldUpdateOperationsInput {
-	set
-	divide
-	multiply
-	decrement
-	increment
-}
-
-fragment IntFilterFields on IntFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment IntNullableFilterFields on IntNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment IntNullableWithAggregatesFilterFields on IntNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment IntWithAggregatesFilterFields on IntWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
 }
 
 fragment InvitationFields on Invitation {
@@ -1206,101 +620,6 @@ fragment InvitationCountAggregateFields on InvitationCountAggregate {
 	isFirsttime
 	invitedToEntity
 	recepientUserId
-}
-
-fragment InvitationCreateInputFields on InvitationCreateInput {
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	invitedToId
-	isFirsttime
-	invitedToEntity
-}
-
-fragment InvitationCreateManyCreatedByInputFields on InvitationCreateManyCreatedByInput {
-	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
-}
-
-fragment InvitationCreateManyCreatedByInputEnvelopeFields on InvitationCreateManyCreatedByInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment InvitationCreateManyInputFields on InvitationCreateManyInput {
-	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
-}
-
-fragment InvitationCreateManyRecepientUserInputFields on InvitationCreateManyRecepientUserInput {
-	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-}
-
-fragment InvitationCreateManyRecepientUserInputEnvelopeFields on InvitationCreateManyRecepientUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment InvitationCreateWithoutCreatedByInputFields on InvitationCreateWithoutCreatedByInput {
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	invitedToId
-	isFirsttime
-	invitedToEntity
-}
-
-fragment InvitationCreateWithoutRecepientUserInputFields on InvitationCreateWithoutRecepientUserInput {
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	invitedToId
-	isFirsttime
-	invitedToEntity
 }
 
 fragment InvitationGroupByFields on InvitationGroupBy {
@@ -1358,227 +677,9 @@ fragment InvitationSumAggregateFields on InvitationSumAggregate {
 	recepientUserId
 }
 
-fragment InvitationWhereUniqueInputFields on InvitationWhereUniqueInput {
-	id
-}
-
-fragment JsonNullableFilterFields on JsonNullableFilter {
-	not
-	equals
-}
-
-fragment JsonNullableWithAggregatesFilterFields on JsonNullableWithAggregatesFilter {
-	not
-	equals
-}
-
-fragment LoginInputFields on LoginInput {
-	email
-	password
-}
-
 fragment MessageResponseFields on MessageResponse {
 	message
 	success
-}
-
-fragment NestedBoolFilterFields on NestedBoolFilter {
-	equals
-}
-
-fragment NestedBoolWithAggregatesFilterFields on NestedBoolWithAggregatesFilter {
-	equals
-}
-
-fragment NestedDateTimeFilterFields on NestedDateTimeFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedDateTimeNullableFilterFields on NestedDateTimeNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedDateTimeNullableWithAggregatesFilterFields on NestedDateTimeNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedDateTimeWithAggregatesFilterFields on NestedDateTimeWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedFloatFilterFields on NestedFloatFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedFloatNullableFilterFields on NestedFloatNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedFloatNullableWithAggregatesFilterFields on NestedFloatNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedIntFilterFields on NestedIntFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedIntNullableFilterFields on NestedIntNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedIntNullableWithAggregatesFilterFields on NestedIntNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedIntWithAggregatesFilterFields on NestedIntWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-}
-
-fragment NestedJsonNullableFilterFields on NestedJsonNullableFilter {
-	not
-	equals
-}
-
-fragment NestedStringFilterFields on NestedStringFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment NestedStringNullableFilterFields on NestedStringNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment NestedStringNullableWithAggregatesFilterFields on NestedStringNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment NestedStringWithAggregatesFilterFields on NestedStringWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment NullableDateTimeFieldUpdateOperationsInputFields on NullableDateTimeFieldUpdateOperationsInput {
-	set
-}
-
-fragment NullableFloatFieldUpdateOperationsInputFields on NullableFloatFieldUpdateOperationsInput {
-	set
-	divide
-	multiply
-	decrement
-	increment
-}
-
-fragment NullableIntFieldUpdateOperationsInputFields on NullableIntFieldUpdateOperationsInput {
-	set
-	divide
-	multiply
-	decrement
-	increment
-}
-
-fragment NullableStringFieldUpdateOperationsInputFields on NullableStringFieldUpdateOperationsInput {
-	set
 }
 
 fragment PostFields on Post {
@@ -1603,50 +704,6 @@ fragment PostCountAggregateFields on PostCountAggregate {
 	title
 	content
 	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
-}
-
-fragment PostCreateInputFields on PostCreateInput {
-	title
-	content
-	createdAt
-	deletedAt
-	published
-	updatedAt
-}
-
-fragment PostCreateManyAuthorInputFields on PostCreateManyAuthorInput {
-	id
-	title
-	content
-	createdAt
-	deletedAt
-	published
-	updatedAt
-}
-
-fragment PostCreateManyAuthorInputEnvelopeFields on PostCreateManyAuthorInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment PostCreateManyInputFields on PostCreateManyInput {
-	id
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
-}
-
-fragment PostCreateWithoutAuthorInputFields on PostCreateWithoutAuthorInput {
-	title
-	content
 	createdAt
 	deletedAt
 	published
@@ -1691,10 +748,6 @@ fragment PostSumAggregateFields on PostSumAggregate {
 	authorId
 }
 
-fragment PostWhereUniqueInputFields on PostWhereUniqueInput {
-	id
-}
-
 fragment ProfileFields on Profile {
 	id
 	bio
@@ -1722,44 +775,6 @@ fragment ProfileCountAggregateFields on ProfileCountAggregate {
 	_all
 	gender
 	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileCreateInputFields on ProfileCreateInput {
-	bio
-	gender
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileCreateManyInputFields on ProfileCreateManyInput {
-	id
-	bio
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileCreateWithoutUserInputFields on ProfileCreateWithoutUserInput {
-	bio
-	gender
 	lastName
 	createdAt
 	deletedAt
@@ -1817,16 +832,6 @@ fragment ProfileSumAggregateFields on ProfileSumAggregate {
 	userId
 }
 
-fragment ProfileUpdateOneWithoutUserInputFields on ProfileUpdateOneWithoutUserInput {
-	delete
-	disconnect
-}
-
-fragment ProfileWhereUniqueInputFields on ProfileWhereUniqueInput {
-	id
-	userId
-}
-
 fragment ProjectFields on Project {
 	id
 	createdAt
@@ -1841,19 +846,6 @@ fragment ProjectAvgAggregateFields on ProjectAvgAggregate {
 fragment ProjectCountAggregateFields on ProjectCountAggregate {
 	id
 	_all
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ProjectCreateInputFields on ProjectCreateInput {
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ProjectCreateManyInputFields on ProjectCreateManyInput {
-	id
 	createdAt
 	deletedAt
 	updatedAt
@@ -1884,15 +876,6 @@ fragment ProjectSumAggregateFields on ProjectSumAggregate {
 	id
 }
 
-fragment ProjectWhereUniqueInputFields on ProjectWhereUniqueInput {
-	id
-}
-
-fragment RegistrationInputFields on RegistrationInput {
-	email
-	password
-}
-
 fragment RoleFields on Role {
 	id
 	name
@@ -1900,7 +883,6 @@ fragment RoleFields on Role {
 	createdAt
 	updatedAt
 	customPerms
-	UserRoleMapping
 }
 
 fragment RoleAvgAggregateFields on RoleAvgAggregate {
@@ -1914,31 +896,6 @@ fragment RoleCountFields on RoleCount {
 fragment RoleCountAggregateFields on RoleCountAggregate {
 	id
 	_all
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
-}
-
-fragment RoleCreateInputFields on RoleCreateInput {
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
-}
-
-fragment RoleCreateManyInputFields on RoleCreateManyInput {
-	id
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
-}
-
-fragment RoleCreateWithoutUserRoleMappingInputFields on RoleCreateWithoutUserRoleMappingInput {
 	name
 	custom
 	createdAt
@@ -1975,22 +932,6 @@ fragment RoleSumAggregateFields on RoleSumAggregate {
 	id
 }
 
-fragment RoleUpdateInputFields on RoleUpdateInput {
-	customPerms
-}
-
-fragment RoleUpdateManyMutationInputFields on RoleUpdateManyMutationInput {
-	customPerms
-}
-
-fragment RoleUpdateWithoutUserRoleMappingInputFields on RoleUpdateWithoutUserRoleMappingInput {
-	customPerms
-}
-
-fragment RoleWhereUniqueInputFields on RoleWhereUniqueInput {
-	id
-}
-
 fragment ScircleFields on Scircle {
 	id
 	createdAt
@@ -2005,19 +946,6 @@ fragment ScircleAvgAggregateFields on ScircleAvgAggregate {
 fragment ScircleCountAggregateFields on ScircleCountAggregate {
 	id
 	_all
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleCreateInputFields on ScircleCreateInput {
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleCreateManyInputFields on ScircleCreateManyInput {
-	id
 	createdAt
 	deletedAt
 	updatedAt
@@ -2048,10 +976,6 @@ fragment ScircleSumAggregateFields on ScircleSumAggregate {
 	id
 }
 
-fragment ScircleWhereUniqueInputFields on ScircleWhereUniqueInput {
-	id
-}
-
 fragment SignInWithLinkendInOutputFields on SignInWithLinkendInOutput {
 	url
 }
@@ -2071,21 +995,6 @@ fragment SkillAvgAggregateFields on SkillAvgAggregate {
 fragment SkillCountAggregateFields on SkillCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillCreateInputFields on SkillCreateInput {
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillCreateManyInputFields on SkillCreateManyInput {
-	id
 	name
 	createdAt
 	deletedAt
@@ -2120,66 +1029,6 @@ fragment SkillSumAggregateFields on SkillSumAggregate {
 	id
 }
 
-fragment SkillWhereUniqueInputFields on SkillWhereUniqueInput {
-	id
-}
-
-fragment StringFieldUpdateOperationsInputFields on StringFieldUpdateOperationsInput {
-	set
-}
-
-fragment StringFilterFields on StringFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment StringNullableFilterFields on StringNullableFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment StringNullableWithAggregatesFilterFields on StringNullableWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
-fragment StringWithAggregatesFilterFields on StringWithAggregatesFilter {
-	gt
-	in
-	lt
-	gte
-	lte
-	notIn
-	equals
-	contains
-	endsWith
-	startsWith
-}
-
 fragment TokenFields on Token {
 	id
 	token
@@ -2199,42 +1048,6 @@ fragment TokenCountAggregateFields on TokenCountAggregate {
 	_all
 	token
 	userId
-	createdAt
-	expiresAt
-	updatedAt
-}
-
-fragment TokenCreateInputFields on TokenCreateInput {
-	token
-	createdAt
-	expiresAt
-	updatedAt
-}
-
-fragment TokenCreateManyInputFields on TokenCreateManyInput {
-	id
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
-}
-
-fragment TokenCreateManyUserInputFields on TokenCreateManyUserInput {
-	id
-	token
-	createdAt
-	expiresAt
-	updatedAt
-}
-
-fragment TokenCreateManyUserInputEnvelopeFields on TokenCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment TokenCreateWithoutUserInputFields on TokenCreateWithoutUserInput {
-	token
 	createdAt
 	expiresAt
 	updatedAt
@@ -2272,36 +1085,15 @@ fragment TokenSumAggregateFields on TokenSumAggregate {
 	userId
 }
 
-fragment TokenWhereUniqueInputFields on TokenWhereUniqueInput {
-	id
-}
-
-fragment UpdateUserProfileInputFields on UpdateUserProfileInput {
-	bio
-	lastName
-	firstName
-}
-
 fragment UserFields on User {
 	id
-	Post
 	email
-	tokens
-	activity
-	comments
 	password
-	addresses
 	createdAt
 	deletedAt
-	education
 	updatedAt
-	experience
 	resetToken
-	roleMapping
-	userProject
 	externalSource
-	invitationsSent
-	invitationsReceived
 }
 
 fragment UserAvgAggregateFields on UserAvgAggregate {
@@ -2326,147 +1118,6 @@ fragment UserCountFields on UserCount {
 fragment UserCountAggregateFields on UserCountAggregate {
 	id
 	_all
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateInputFields on UserCreateInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateManyInputFields on UserCreateManyInput {
-	id
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutActivityInputFields on UserCreateWithoutActivityInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutAddressesInputFields on UserCreateWithoutAddressesInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutCommentsInputFields on UserCreateWithoutCommentsInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutEducationInputFields on UserCreateWithoutEducationInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutExperienceInputFields on UserCreateWithoutExperienceInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutInvitationsReceivedInputFields on UserCreateWithoutInvitationsReceivedInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutInvitationsSentInputFields on UserCreateWithoutInvitationsSentInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutPostInputFields on UserCreateWithoutPostInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutProfileInputFields on UserCreateWithoutProfileInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutRoleMappingInputFields on UserCreateWithoutRoleMappingInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutTokensInputFields on UserCreateWithoutTokensInput {
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
-}
-
-fragment UserCreateWithoutUserProjectInputFields on UserCreateWithoutUserProjectInput {
 	email
 	password
 	createdAt
@@ -2547,95 +1198,6 @@ fragment UserProjectCountAggregateFields on UserProjectCountAggregate {
 	userProjectRoleId
 }
 
-fragment UserProjectCreateInputFields on UserProjectCreateInput {
-	to
-	from
-	name
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-}
-
-fragment UserProjectCreateManyInputFields on UserProjectCreateManyInput {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectCreateManyRoleInputFields on UserProjectCreateManyRoleInput {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-}
-
-fragment UserProjectCreateManyRoleInputEnvelopeFields on UserProjectCreateManyRoleInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment UserProjectCreateManyUserInputFields on UserProjectCreateManyUserInput {
-	id
-	to
-	from
-	name
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectCreateManyUserInputEnvelopeFields on UserProjectCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment UserProjectCreateWithoutRoleInputFields on UserProjectCreateWithoutRoleInput {
-	to
-	from
-	name
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-}
-
-fragment UserProjectCreateWithoutUserInputFields on UserProjectCreateWithoutUserInput {
-	to
-	from
-	name
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-}
-
 fragment UserProjectGroupByFields on UserProjectGroupBy {
 	id
 	to
@@ -2687,7 +1249,6 @@ fragment UserProjectRoleFields on UserProjectRole {
 	createdAt
 	deletedAt
 	updatedAt
-	userProject
 }
 
 fragment UserProjectRoleAvgAggregateFields on UserProjectRoleAvgAggregate {
@@ -2701,28 +1262,6 @@ fragment UserProjectRoleCountFields on UserProjectRoleCount {
 fragment UserProjectRoleCountAggregateFields on UserProjectRoleCountAggregate {
 	id
 	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment UserProjectRoleCreateInputFields on UserProjectRoleCreateInput {
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment UserProjectRoleCreateManyInputFields on UserProjectRoleCreateManyInput {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment UserProjectRoleCreateWithoutUserProjectInputFields on UserProjectRoleCreateWithoutUserProjectInput {
 	name
 	createdAt
 	deletedAt
@@ -2757,19 +1296,11 @@ fragment UserProjectRoleSumAggregateFields on UserProjectRoleSumAggregate {
 	id
 }
 
-fragment UserProjectRoleWhereUniqueInputFields on UserProjectRoleWhereUniqueInput {
-	id
-}
-
 fragment UserProjectSumAggregateFields on UserProjectSumAggregate {
 	id
 	userId
 	teamSize
 	userProjectRoleId
-}
-
-fragment UserProjectWhereUniqueInputFields on UserProjectWhereUniqueInput {
-	id
 }
 
 fragment UserRoleMappingFields on UserRoleMapping {
@@ -2791,53 +1322,6 @@ fragment UserRoleMappingCountAggregateFields on UserRoleMappingCountAggregate {
 	_all
 	roleId
 	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateInputFields on UserRoleMappingCreateInput {
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateManyInputFields on UserRoleMappingCreateManyInput {
-	id
-	roleId
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateManyRoleInputFields on UserRoleMappingCreateManyRoleInput {
-	id
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateManyRoleInputEnvelopeFields on UserRoleMappingCreateManyRoleInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment UserRoleMappingCreateManyUserInputFields on UserRoleMappingCreateManyUserInput {
-	id
-	roleId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateManyUserInputEnvelopeFields on UserRoleMappingCreateManyUserInputEnvelope {
-	data
-	skipDuplicates
-}
-
-fragment UserRoleMappingCreateWithoutRoleInputFields on UserRoleMappingCreateWithoutRoleInput {
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingCreateWithoutUserInputFields on UserRoleMappingCreateWithoutUserInput {
 	createdAt
 	updatedAt
 }
@@ -2872,16 +1356,7 @@ fragment UserRoleMappingSumAggregateFields on UserRoleMappingSumAggregate {
 	userId
 }
 
-fragment UserRoleMappingWhereUniqueInputFields on UserRoleMappingWhereUniqueInput {
-	id
-}
-
 fragment UserSumAggregateFields on UserSumAggregate {
 	id
 	externalSource
-}
-
-fragment UserWhereUniqueInputFields on UserWhereUniqueInput {
-	id
-	email
 }
