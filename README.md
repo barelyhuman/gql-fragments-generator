@@ -42,6 +42,17 @@ gqlfragments --help
 gqlfragments --schema ./example/schema.gql --out ./example/output
 ```
 
+```bash
+Usage: gqlfragments [options]
+
+Options:
+  --schema [value]  path of your graphql schema
+  --out [value]     folder to store the generated fragments in
+  --ignore [value]  path to csv containing types to be ignored
+  --clean           create a clean build
+  -h, --help        display help for command
+```
+
 ## License
 
 [MIT](/LICENSE) 2022 [Reaper](github.com/barelyhuman)  

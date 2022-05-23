@@ -10,11 +10,11 @@ const {format} = require('./lib/format')
 const {genericGraphQLTypes} = require('./constants')
 const {checkNestedDefinitions} = require('./lib/check-nested')
 
-function generateFragments({schema, out, clean} = {}) {
+function generateFragments({schema, out, clean, ignoreList} = {}) {
 	const gqlSchema = readSchema(schema)
-
+	ignoreList = ignoreList || []
 	const userScalars = Object.keys(gqlSchema.getTypeMap()).filter(
-		x => genericGraphQLTypes.indexOf(x) === -1,
+		x => genericGraphQLTypes.indexOf(x) === -1 && ignoreList.indexOf(x) === -1,
 	)
 
 	const fragmentStrings = userScalars

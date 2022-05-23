@@ -1,1362 +1,1642 @@
-fragment AccessTokenOutputFields on AccessTokenOutput {
-	token
-}
 
-fragment ActivityFields on Activity {
+fragment ActivityGroupByFields on ActivityGroupBy
+{
 	id
-	action
-	userId
-	createdAt
-	updatedAt
+action
+userId
+createdAt
+updatedAt
 }
 
-fragment ActivityAvgAggregateFields on ActivityAvgAggregate {
+
+fragment ActivityMaxAggregateFields on ActivityMaxAggregate
+{
 	id
-	userId
+userId
+createdAt
+updatedAt
 }
 
-fragment ActivityCountAggregateFields on ActivityCountAggregate {
+
+fragment ActivityMinAggregateFields on ActivityMinAggregate
+{
 	id
-	_all
-	action
-	userId
-	createdAt
-	updatedAt
+userId
+createdAt
+updatedAt
 }
 
-fragment ActivityGroupByFields on ActivityGroupBy {
+
+fragment ActivitySumAggregateFields on ActivitySumAggregate
+{
 	id
-	action
-	userId
-	createdAt
-	updatedAt
+userId
 }
 
-fragment ActivityMaxAggregateFields on ActivityMaxAggregate {
+
+fragment AddressFields on Address
+{
 	id
-	userId
-	createdAt
-	updatedAt
+lat
+lng
+city
+street
+userId
+zipcode
+countryId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ActivityMinAggregateFields on ActivityMinAggregate {
+
+fragment AddressAvgAggregateFields on AddressAvgAggregate
+{
 	id
-	userId
-	createdAt
-	updatedAt
+lat
+lng
+userId
+countryId
 }
 
-fragment ActivitySumAggregateFields on ActivitySumAggregate {
+
+fragment AddressCountAggregateFields on AddressCountAggregate
+{
 	id
-	userId
+lat
+lng
+_all
+city
+street
+userId
+zipcode
+countryId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment AddressFields on Address {
+
+fragment AddressGroupByFields on AddressGroupBy
+{
 	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
+lat
+lng
+city
+street
+userId
+zipcode
+countryId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment AddressAvgAggregateFields on AddressAvgAggregate {
+
+fragment AddressMaxAggregateFields on AddressMaxAggregate
+{
 	id
-	lat
-	lng
-	userId
-	countryId
+lat
+lng
+city
+street
+userId
+zipcode
+countryId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment AddressCountAggregateFields on AddressCountAggregate {
+
+fragment AddressMinAggregateFields on AddressMinAggregate
+{
 	id
-	lat
-	lng
-	_all
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
+lat
+lng
+city
+street
+userId
+zipcode
+countryId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment AddressGroupByFields on AddressGroupBy {
+
+fragment AddressSumAggregateFields on AddressSumAggregate
+{
 	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
+lat
+lng
+userId
+countryId
 }
 
-fragment AddressMaxAggregateFields on AddressMaxAggregate {
-	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
-}
 
-fragment AddressMinAggregateFields on AddressMinAggregate {
-	id
-	lat
-	lng
-	city
-	street
-	userId
-	zipcode
-	countryId
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment AddressSumAggregateFields on AddressSumAggregate {
-	id
-	lat
-	lng
-	userId
-	countryId
-}
-
-fragment AffectedRowsOutputFields on AffectedRowsOutput {
+fragment AffectedRowsOutputFields on AffectedRowsOutput
+{
 	count
 }
 
-fragment CommentFields on Comment {
+
+fragment CommentFields on Comment
+{
 	id
-	userId
-	createdAt
-	deletedAt
-	updatedAt
+userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment CommentAvgAggregateFields on CommentAvgAggregate {
+
+fragment CommentAvgAggregateFields on CommentAvgAggregate
+{
 	id
-	userId
+userId
 }
 
-fragment CommentCountAggregateFields on CommentCountAggregate {
+
+fragment CommentCountAggregateFields on CommentCountAggregate
+{
 	id
-	_all
-	userId
-	createdAt
-	deletedAt
-	updatedAt
+_all
+userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment CommentGroupByFields on CommentGroupBy {
+
+fragment CommentGroupByFields on CommentGroupBy
+{
 	id
-	userId
-	createdAt
-	deletedAt
-	updatedAt
+userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment CommentMaxAggregateFields on CommentMaxAggregate {
+
+fragment CommentMaxAggregateFields on CommentMaxAggregate
+{
 	id
-	userId
-	createdAt
-	deletedAt
-	updatedAt
+userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment CommentMinAggregateFields on CommentMinAggregate {
+
+fragment CommentMinAggregateFields on CommentMinAggregate
+{
 	id
-	userId
-	createdAt
-	deletedAt
-	updatedAt
+userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment CommentSumAggregateFields on CommentSumAggregate {
+
+fragment CommentSumAggregateFields on CommentSumAggregate
+{
 	id
-	userId
+userId
 }
 
-fragment CountryFields on Country {
+
+fragment CountryFields on Country
+{
 	id
-	name
-	createdAt
-	shortCode
-	updatedAt
+name
+createdAt
+shortCode
+updatedAt
 }
 
-fragment CountryAvgAggregateFields on CountryAvgAggregate {
+
+fragment CountryAvgAggregateFields on CountryAvgAggregate
+{
 	id
 }
 
-fragment CountryCountFields on CountryCount {
+
+fragment CountryCountFields on CountryCount
+{
 	address
 }
 
-fragment CountryCountAggregateFields on CountryCountAggregate {
+
+fragment CountryCountAggregateFields on CountryCountAggregate
+{
 	id
-	_all
-	name
-	createdAt
-	shortCode
-	updatedAt
+_all
+name
+createdAt
+shortCode
+updatedAt
 }
 
-fragment CountryGroupByFields on CountryGroupBy {
+
+fragment CountryGroupByFields on CountryGroupBy
+{
 	id
-	name
-	createdAt
-	shortCode
-	updatedAt
+name
+createdAt
+shortCode
+updatedAt
 }
 
-fragment CountryMaxAggregateFields on CountryMaxAggregate {
+
+fragment CountryMaxAggregateFields on CountryMaxAggregate
+{
 	id
-	name
-	createdAt
-	shortCode
-	updatedAt
+name
+createdAt
+shortCode
+updatedAt
 }
 
-fragment CountryMinAggregateFields on CountryMinAggregate {
+
+fragment CountryMinAggregateFields on CountryMinAggregate
+{
 	id
-	name
-	createdAt
-	shortCode
-	updatedAt
+name
+createdAt
+shortCode
+updatedAt
 }
 
-fragment CountrySumAggregateFields on CountrySumAggregate {
-	id
-}
 
-fragment DomainFields on Domain {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
-
-fragment DomainAvgAggregateFields on DomainAvgAggregate {
+fragment CountrySumAggregateFields on CountrySumAggregate
+{
 	id
 }
 
-fragment DomainCountAggregateFields on DomainCountAggregate {
+
+fragment DomainFields on Domain
+{
 	id
-	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
+name
+createdAt
+deletedAt
+updatedAt
+description
 }
 
-fragment DomainGroupByFields on DomainGroupBy {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
 
-fragment DomainMaxAggregateFields on DomainMaxAggregate {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
-
-fragment DomainMinAggregateFields on DomainMinAggregate {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-	description
-}
-
-fragment DomainSumAggregateFields on DomainSumAggregate {
+fragment DomainAvgAggregateFields on DomainAvgAggregate
+{
 	id
 }
 
-fragment EducationFields on Education {
+
+fragment DomainCountAggregateFields on DomainCountAggregate
+{
 	id
-	to
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
+_all
+name
+createdAt
+deletedAt
+updatedAt
+description
 }
 
-fragment EducationAvgAggregateFields on EducationAvgAggregate {
+
+fragment DomainGroupByFields on DomainGroupBy
+{
 	id
-	userId
+name
+createdAt
+deletedAt
+updatedAt
+description
 }
 
-fragment EducationCountAggregateFields on EducationCountAggregate {
+
+fragment DomainMaxAggregateFields on DomainMaxAggregate
+{
 	id
-	to
-	_all
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
+name
+createdAt
+deletedAt
+updatedAt
+description
 }
 
-fragment EducationGroupByFields on EducationGroupBy {
+
+fragment DomainMinAggregateFields on DomainMinAggregate
+{
 	id
-	to
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
+name
+createdAt
+deletedAt
+updatedAt
+description
 }
 
-fragment EducationMaxAggregateFields on EducationMaxAggregate {
-	id
-	to
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
 
-fragment EducationMinAggregateFields on EducationMinAggregate {
-	id
-	to
-	from
-	field
-	grade
-	degree
-	userId
-	createdAt
-	deletedAt
-	institute
-	updatedAt
-	description
-}
-
-fragment EducationSumAggregateFields on EducationSumAggregate {
-	id
-	userId
-}
-
-fragment EmploymentTypeFields on EmploymentType {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment EmploymentTypeAvgAggregateFields on EmploymentTypeAvgAggregate {
+fragment DomainSumAggregateFields on DomainSumAggregate
+{
 	id
 }
 
-fragment EmploymentTypeCountFields on EmploymentTypeCount {
+
+fragment EducationFields on Education
+{
+	id
+to
+from
+field
+grade
+degree
+userId
+createdAt
+deletedAt
+institute
+updatedAt
+description
+}
+
+
+fragment EducationAvgAggregateFields on EducationAvgAggregate
+{
+	id
+userId
+}
+
+
+fragment EducationCountAggregateFields on EducationCountAggregate
+{
+	id
+to
+_all
+from
+field
+grade
+degree
+userId
+createdAt
+deletedAt
+institute
+updatedAt
+description
+}
+
+
+fragment EducationGroupByFields on EducationGroupBy
+{
+	id
+to
+from
+field
+grade
+degree
+userId
+createdAt
+deletedAt
+institute
+updatedAt
+description
+}
+
+
+fragment EducationMaxAggregateFields on EducationMaxAggregate
+{
+	id
+to
+from
+field
+grade
+degree
+userId
+createdAt
+deletedAt
+institute
+updatedAt
+description
+}
+
+
+fragment EducationMinAggregateFields on EducationMinAggregate
+{
+	id
+to
+from
+field
+grade
+degree
+userId
+createdAt
+deletedAt
+institute
+updatedAt
+description
+}
+
+
+fragment EducationSumAggregateFields on EducationSumAggregate
+{
+	id
+userId
+}
+
+
+fragment EmploymentTypeFields on EmploymentType
+{
+	id
+name
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment EmploymentTypeAvgAggregateFields on EmploymentTypeAvgAggregate
+{
+	id
+}
+
+
+fragment EmploymentTypeCountFields on EmploymentTypeCount
+{
 	Experience
 }
 
-fragment EmploymentTypeCountAggregateFields on EmploymentTypeCountAggregate {
+
+fragment EmploymentTypeCountAggregateFields on EmploymentTypeCountAggregate
+{
 	id
-	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
+_all
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment EmploymentTypeGroupByFields on EmploymentTypeGroupBy {
+
+fragment EmploymentTypeGroupByFields on EmploymentTypeGroupBy
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment EmploymentTypeMaxAggregateFields on EmploymentTypeMaxAggregate {
+
+fragment EmploymentTypeMaxAggregateFields on EmploymentTypeMaxAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment EmploymentTypeMinAggregateFields on EmploymentTypeMinAggregate {
+
+fragment EmploymentTypeMinAggregateFields on EmploymentTypeMinAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment EmploymentTypeSumAggregateFields on EmploymentTypeSumAggregate {
-	id
-}
 
-fragment ExperienceFields on Experience {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceAvgAggregateFields on ExperienceAvgAggregate {
-	id
-	roleId
-	userId
-	employmentTypeId
-}
-
-fragment ExperienceCountAggregateFields on ExperienceCountAggregate {
-	id
-	to
-	_all
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceGroupByFields on ExperienceGroupBy {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceMaxAggregateFields on ExperienceMaxAggregate {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceMinAggregateFields on ExperienceMinAggregate {
-	id
-	to
-	from
-	roleId
-	userId
-	location
-	createdAt
-	deletedAt
-	updatedAt
-	description
-	organization
-	employmentTypeId
-}
-
-fragment ExperienceRoleFields on ExperienceRole {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ExperienceRoleAvgAggregateFields on ExperienceRoleAvgAggregate {
+fragment EmploymentTypeSumAggregateFields on EmploymentTypeSumAggregate
+{
 	id
 }
 
-fragment ExperienceRoleCountFields on ExperienceRoleCount {
+
+fragment ExperienceFields on Experience
+{
+	id
+to
+from
+roleId
+userId
+location
+createdAt
+deletedAt
+updatedAt
+description
+organization
+employmentTypeId
+}
+
+
+fragment ExperienceAvgAggregateFields on ExperienceAvgAggregate
+{
+	id
+roleId
+userId
+employmentTypeId
+}
+
+
+fragment ExperienceCountAggregateFields on ExperienceCountAggregate
+{
+	id
+to
+_all
+from
+roleId
+userId
+location
+createdAt
+deletedAt
+updatedAt
+description
+organization
+employmentTypeId
+}
+
+
+fragment ExperienceGroupByFields on ExperienceGroupBy
+{
+	id
+to
+from
+roleId
+userId
+location
+createdAt
+deletedAt
+updatedAt
+description
+organization
+employmentTypeId
+}
+
+
+fragment ExperienceMaxAggregateFields on ExperienceMaxAggregate
+{
+	id
+to
+from
+roleId
+userId
+location
+createdAt
+deletedAt
+updatedAt
+description
+organization
+employmentTypeId
+}
+
+
+fragment ExperienceMinAggregateFields on ExperienceMinAggregate
+{
+	id
+to
+from
+roleId
+userId
+location
+createdAt
+deletedAt
+updatedAt
+description
+organization
+employmentTypeId
+}
+
+
+fragment ExperienceRoleFields on ExperienceRole
+{
+	id
+name
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ExperienceRoleAvgAggregateFields on ExperienceRoleAvgAggregate
+{
+	id
+}
+
+
+fragment ExperienceRoleCountFields on ExperienceRoleCount
+{
 	Experience
 }
 
-fragment ExperienceRoleCountAggregateFields on ExperienceRoleCountAggregate {
+
+fragment ExperienceRoleCountAggregateFields on ExperienceRoleCountAggregate
+{
 	id
-	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
+_all
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ExperienceRoleGroupByFields on ExperienceRoleGroupBy {
+
+fragment ExperienceRoleGroupByFields on ExperienceRoleGroupBy
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ExperienceRoleMaxAggregateFields on ExperienceRoleMaxAggregate {
+
+fragment ExperienceRoleMaxAggregateFields on ExperienceRoleMaxAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ExperienceRoleMinAggregateFields on ExperienceRoleMinAggregate {
+
+fragment ExperienceRoleMinAggregateFields on ExperienceRoleMinAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ExperienceRoleSumAggregateFields on ExperienceRoleSumAggregate {
+
+fragment ExperienceRoleSumAggregateFields on ExperienceRoleSumAggregate
+{
 	id
 }
 
-fragment ExperienceSumAggregateFields on ExperienceSumAggregate {
+
+fragment ExperienceSumAggregateFields on ExperienceSumAggregate
+{
 	id
-	roleId
-	userId
-	employmentTypeId
+roleId
+userId
+employmentTypeId
 }
 
-fragment InvitationFields on Invitation {
+
+fragment InvitationFields on Invitation
+{
 	id
-	code
+code
+message
+createdAt
+deletedAt
+updatedAt
+isAccepted
+isRejected
+createdById
+invitedToId
+isFirsttime
+invitedToEntity
+recepientUserId
+}
+
+
+fragment InvitationAvgAggregateFields on InvitationAvgAggregate
+{
+	id
+createdById
+invitedToId
+recepientUserId
+}
+
+
+fragment InvitationCountAggregateFields on InvitationCountAggregate
+{
+	id
+_all
+code
+message
+createdAt
+deletedAt
+updatedAt
+isAccepted
+isRejected
+createdById
+invitedToId
+isFirsttime
+invitedToEntity
+recepientUserId
+}
+
+
+fragment InvitationGroupByFields on InvitationGroupBy
+{
+	id
+code
+message
+createdAt
+deletedAt
+updatedAt
+isAccepted
+isRejected
+createdById
+invitedToId
+isFirsttime
+invitedToEntity
+recepientUserId
+}
+
+
+fragment InvitationMaxAggregateFields on InvitationMaxAggregate
+{
+	id
+code
+message
+createdAt
+deletedAt
+updatedAt
+isAccepted
+isRejected
+createdById
+invitedToId
+isFirsttime
+invitedToEntity
+recepientUserId
+}
+
+
+fragment InvitationMinAggregateFields on InvitationMinAggregate
+{
+	id
+code
+message
+createdAt
+deletedAt
+updatedAt
+isAccepted
+isRejected
+createdById
+invitedToId
+isFirsttime
+invitedToEntity
+recepientUserId
+}
+
+
+fragment InvitationSumAggregateFields on InvitationSumAggregate
+{
+	id
+createdById
+invitedToId
+recepientUserId
+}
+
+
+fragment MessageResponseFields on MessageResponse
+{
 	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
+success
 }
 
-fragment InvitationAvgAggregateFields on InvitationAvgAggregate {
+
+fragment PostFields on Post
+{
 	id
-	createdById
-	invitedToId
-	recepientUserId
+title
+content
+authorId
+createdAt
+deletedAt
+published
+updatedAt
 }
 
-fragment InvitationCountAggregateFields on InvitationCountAggregate {
+
+fragment PostAvgAggregateFields on PostAvgAggregate
+{
 	id
-	_all
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
+authorId
 }
 
-fragment InvitationGroupByFields on InvitationGroupBy {
+
+fragment PostCountAggregateFields on PostCountAggregate
+{
 	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
+_all
+title
+content
+authorId
+createdAt
+deletedAt
+published
+updatedAt
 }
 
-fragment InvitationMaxAggregateFields on InvitationMaxAggregate {
+
+fragment PostGroupByFields on PostGroupBy
+{
 	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
+title
+content
+authorId
+createdAt
+deletedAt
+published
+updatedAt
 }
 
-fragment InvitationMinAggregateFields on InvitationMinAggregate {
+
+fragment PostMaxAggregateFields on PostMaxAggregate
+{
 	id
-	code
-	message
-	createdAt
-	deletedAt
-	updatedAt
-	isAccepted
-	isRejected
-	createdById
-	invitedToId
-	isFirsttime
-	invitedToEntity
-	recepientUserId
+title
+content
+authorId
+createdAt
+deletedAt
+published
+updatedAt
 }
 
-fragment InvitationSumAggregateFields on InvitationSumAggregate {
+
+fragment PostMinAggregateFields on PostMinAggregate
+{
 	id
-	createdById
-	invitedToId
-	recepientUserId
+title
+content
+authorId
+createdAt
+deletedAt
+published
+updatedAt
 }
 
-fragment MessageResponseFields on MessageResponse {
-	message
-	success
-}
 
-fragment PostFields on Post {
+fragment PostSumAggregateFields on PostSumAggregate
+{
 	id
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
+authorId
 }
 
-fragment PostAvgAggregateFields on PostAvgAggregate {
+
+fragment ProfileFields on Profile
+{
 	id
-	authorId
+bio
+gender
+userId
+lastName
+createdAt
+deletedAt
+firstName
+updatedAt
+genderLabel
+linkedInUrl
+profilePicUrl
 }
 
-fragment PostCountAggregateFields on PostCountAggregate {
+
+fragment ProfileAvgAggregateFields on ProfileAvgAggregate
+{
 	id
-	_all
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
+gender
+userId
 }
 
-fragment PostGroupByFields on PostGroupBy {
+
+fragment ProfileCountAggregateFields on ProfileCountAggregate
+{
 	id
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
+bio
+_all
+gender
+userId
+lastName
+createdAt
+deletedAt
+firstName
+updatedAt
+linkedInUrl
+profilePicUrl
 }
 
-fragment PostMaxAggregateFields on PostMaxAggregate {
+
+fragment ProfileGroupByFields on ProfileGroupBy
+{
 	id
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
+bio
+gender
+userId
+lastName
+createdAt
+deletedAt
+firstName
+updatedAt
+linkedInUrl
+profilePicUrl
 }
 
-fragment PostMinAggregateFields on PostMinAggregate {
+
+fragment ProfileMaxAggregateFields on ProfileMaxAggregate
+{
 	id
-	title
-	content
-	authorId
-	createdAt
-	deletedAt
-	published
-	updatedAt
+bio
+gender
+userId
+lastName
+createdAt
+deletedAt
+firstName
+updatedAt
+linkedInUrl
+profilePicUrl
 }
 
-fragment PostSumAggregateFields on PostSumAggregate {
+
+fragment ProfileMinAggregateFields on ProfileMinAggregate
+{
 	id
-	authorId
+bio
+gender
+userId
+lastName
+createdAt
+deletedAt
+firstName
+updatedAt
+linkedInUrl
+profilePicUrl
 }
 
-fragment ProfileFields on Profile {
+
+fragment ProfileSumAggregateFields on ProfileSumAggregate
+{
 	id
-	bio
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	genderLabel
-	linkedInUrl
-	profilePicUrl
+gender
+userId
 }
 
-fragment ProfileAvgAggregateFields on ProfileAvgAggregate {
+
+fragment ProjectFields on Project
+{
 	id
-	gender
-	userId
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ProfileCountAggregateFields on ProfileCountAggregate {
-	id
-	bio
-	_all
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
 
-fragment ProfileGroupByFields on ProfileGroupBy {
-	id
-	bio
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileMaxAggregateFields on ProfileMaxAggregate {
-	id
-	bio
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileMinAggregateFields on ProfileMinAggregate {
-	id
-	bio
-	gender
-	userId
-	lastName
-	createdAt
-	deletedAt
-	firstName
-	updatedAt
-	linkedInUrl
-	profilePicUrl
-}
-
-fragment ProfileSumAggregateFields on ProfileSumAggregate {
-	id
-	gender
-	userId
-}
-
-fragment ProjectFields on Project {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ProjectAvgAggregateFields on ProjectAvgAggregate {
+fragment ProjectAvgAggregateFields on ProjectAvgAggregate
+{
 	id
 }
 
-fragment ProjectCountAggregateFields on ProjectCountAggregate {
+
+fragment ProjectCountAggregateFields on ProjectCountAggregate
+{
 	id
-	_all
-	createdAt
-	deletedAt
-	updatedAt
+_all
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ProjectGroupByFields on ProjectGroupBy {
+
+fragment ProjectGroupByFields on ProjectGroupBy
+{
 	id
-	createdAt
-	deletedAt
-	updatedAt
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ProjectMaxAggregateFields on ProjectMaxAggregate {
+
+fragment ProjectMaxAggregateFields on ProjectMaxAggregate
+{
 	id
-	createdAt
-	deletedAt
-	updatedAt
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ProjectMinAggregateFields on ProjectMinAggregate {
+
+fragment ProjectMinAggregateFields on ProjectMinAggregate
+{
 	id
-	createdAt
-	deletedAt
-	updatedAt
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment ProjectSumAggregateFields on ProjectSumAggregate {
-	id
-}
 
-fragment RoleFields on Role {
-	id
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
-}
-
-fragment RoleAvgAggregateFields on RoleAvgAggregate {
+fragment ProjectSumAggregateFields on ProjectSumAggregate
+{
 	id
 }
 
-fragment RoleCountFields on RoleCount {
+
+fragment RoleFields on Role
+{
+	id
+name
+custom
+createdAt
+updatedAt
+customPerms
+}
+
+
+fragment RoleAvgAggregateFields on RoleAvgAggregate
+{
+	id
+}
+
+
+fragment RoleCountFields on RoleCount
+{
 	UserRoleMapping
 }
 
-fragment RoleCountAggregateFields on RoleCountAggregate {
+
+fragment RoleCountAggregateFields on RoleCountAggregate
+{
 	id
-	_all
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
+_all
+name
+custom
+createdAt
+updatedAt
+customPerms
 }
 
-fragment RoleGroupByFields on RoleGroupBy {
+
+fragment RoleGroupByFields on RoleGroupBy
+{
 	id
-	name
-	custom
-	createdAt
-	updatedAt
-	customPerms
+name
+custom
+createdAt
+updatedAt
+customPerms
 }
 
-fragment RoleMaxAggregateFields on RoleMaxAggregate {
+
+fragment RoleMaxAggregateFields on RoleMaxAggregate
+{
 	id
-	name
-	custom
-	createdAt
-	updatedAt
+name
+custom
+createdAt
+updatedAt
 }
 
-fragment RoleMinAggregateFields on RoleMinAggregate {
+
+fragment RoleMinAggregateFields on RoleMinAggregate
+{
 	id
-	name
-	custom
-	createdAt
-	updatedAt
+name
+custom
+createdAt
+updatedAt
 }
 
-fragment RoleSumAggregateFields on RoleSumAggregate {
-	id
-}
 
-fragment ScircleFields on Scircle {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleAvgAggregateFields on ScircleAvgAggregate {
-	id
-}
-
-fragment ScircleCountAggregateFields on ScircleCountAggregate {
-	id
-	_all
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleGroupByFields on ScircleGroupBy {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleMaxAggregateFields on ScircleMaxAggregate {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleMinAggregateFields on ScircleMinAggregate {
-	id
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment ScircleSumAggregateFields on ScircleSumAggregate {
+fragment RoleSumAggregateFields on RoleSumAggregate
+{
 	id
 }
 
-fragment SignInWithLinkendInOutputFields on SignInWithLinkendInOutput {
+
+fragment ScircleFields on Scircle
+{
+	id
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ScircleAvgAggregateFields on ScircleAvgAggregate
+{
+	id
+}
+
+
+fragment ScircleCountAggregateFields on ScircleCountAggregate
+{
+	id
+_all
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ScircleGroupByFields on ScircleGroupBy
+{
+	id
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ScircleMaxAggregateFields on ScircleMaxAggregate
+{
+	id
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ScircleMinAggregateFields on ScircleMinAggregate
+{
+	id
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment ScircleSumAggregateFields on ScircleSumAggregate
+{
+	id
+}
+
+
+fragment SignInWithLinkendInOutputFields on SignInWithLinkendInOutput
+{
 	url
 }
 
-fragment SkillFields on Skill {
+
+fragment SkillFields on Skill
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment SkillAvgAggregateFields on SkillAvgAggregate {
-	id
-}
 
-fragment SkillCountAggregateFields on SkillCountAggregate {
-	id
-	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillGroupByFields on SkillGroupBy {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillMaxAggregateFields on SkillMaxAggregate {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillMinAggregateFields on SkillMinAggregate {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment SkillSumAggregateFields on SkillSumAggregate {
+fragment SkillAvgAggregateFields on SkillAvgAggregate
+{
 	id
 }
 
-fragment TokenFields on Token {
+
+fragment SkillCountAggregateFields on SkillCountAggregate
+{
 	id
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
+_all
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment TokenAvgAggregateFields on TokenAvgAggregate {
+
+fragment SkillGroupByFields on SkillGroupBy
+{
 	id
-	userId
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment TokenCountAggregateFields on TokenCountAggregate {
+
+fragment SkillMaxAggregateFields on SkillMaxAggregate
+{
 	id
-	_all
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment TokenGroupByFields on TokenGroupBy {
+
+fragment SkillMinAggregateFields on SkillMinAggregate
+{
 	id
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment TokenMaxAggregateFields on TokenMaxAggregate {
+
+fragment SkillSumAggregateFields on SkillSumAggregate
+{
 	id
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
 }
 
-fragment TokenMinAggregateFields on TokenMinAggregate {
+
+fragment TokenFields on Token
+{
 	id
-	token
-	userId
-	createdAt
-	expiresAt
-	updatedAt
+token
+userId
+createdAt
+expiresAt
+updatedAt
 }
 
-fragment TokenSumAggregateFields on TokenSumAggregate {
+
+fragment TokenAvgAggregateFields on TokenAvgAggregate
+{
 	id
-	userId
+userId
 }
 
-fragment UserFields on User {
+
+fragment TokenCountAggregateFields on TokenCountAggregate
+{
 	id
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
+_all
+token
+userId
+createdAt
+expiresAt
+updatedAt
 }
 
-fragment UserAvgAggregateFields on UserAvgAggregate {
+
+fragment TokenGroupByFields on TokenGroupBy
+{
 	id
-	externalSource
+token
+userId
+createdAt
+expiresAt
+updatedAt
 }
 
-fragment UserCountFields on UserCount {
+
+fragment TokenMaxAggregateFields on TokenMaxAggregate
+{
+	id
+token
+userId
+createdAt
+expiresAt
+updatedAt
+}
+
+
+fragment TokenMinAggregateFields on TokenMinAggregate
+{
+	id
+token
+userId
+createdAt
+expiresAt
+updatedAt
+}
+
+
+fragment TokenSumAggregateFields on TokenSumAggregate
+{
+	id
+userId
+}
+
+
+fragment UserFields on User
+{
+	id
+email
+password
+createdAt
+deletedAt
+updatedAt
+resetToken
+externalSource
+}
+
+
+fragment UserAvgAggregateFields on UserAvgAggregate
+{
+	id
+externalSource
+}
+
+
+fragment UserCountFields on UserCount
+{
 	Post
-	tokens
-	activity
-	comments
-	addresses
-	education
-	experience
-	roleMapping
+tokens
+activity
+comments
+addresses
+education
+experience
+roleMapping
+userProject
+invitationsSent
+invitationsReceived
+}
+
+
+fragment UserCountAggregateFields on UserCountAggregate
+{
+	id
+_all
+email
+password
+createdAt
+deletedAt
+updatedAt
+resetToken
+externalSource
+}
+
+
+fragment UserGroupByFields on UserGroupBy
+{
+	id
+email
+password
+createdAt
+deletedAt
+updatedAt
+resetToken
+externalSource
+}
+
+
+fragment UserMaxAggregateFields on UserMaxAggregate
+{
+	id
+email
+password
+createdAt
+deletedAt
+updatedAt
+resetToken
+externalSource
+}
+
+
+fragment UserMinAggregateFields on UserMinAggregate
+{
+	id
+email
+password
+createdAt
+deletedAt
+updatedAt
+resetToken
+externalSource
+}
+
+
+fragment UserProjectFields on UserProject
+{
+	id
+to
+from
+name
+userId
+teamSize
+createdAt
+deletedAt
+updatedAt
+projectURL
+description
+userProjectRoleId
+}
+
+
+fragment UserProjectAvgAggregateFields on UserProjectAvgAggregate
+{
+	id
+userId
+teamSize
+userProjectRoleId
+}
+
+
+fragment UserProjectCountAggregateFields on UserProjectCountAggregate
+{
+	id
+to
+_all
+from
+name
+userId
+teamSize
+createdAt
+deletedAt
+updatedAt
+projectURL
+description
+userProjectRoleId
+}
+
+
+fragment UserProjectGroupByFields on UserProjectGroupBy
+{
+	id
+to
+from
+name
+userId
+teamSize
+createdAt
+deletedAt
+updatedAt
+projectURL
+description
+userProjectRoleId
+}
+
+
+fragment UserProjectMaxAggregateFields on UserProjectMaxAggregate
+{
+	id
+to
+from
+name
+userId
+teamSize
+createdAt
+deletedAt
+updatedAt
+projectURL
+description
+userProjectRoleId
+}
+
+
+fragment UserProjectMinAggregateFields on UserProjectMinAggregate
+{
+	id
+to
+from
+name
+userId
+teamSize
+createdAt
+deletedAt
+updatedAt
+projectURL
+description
+userProjectRoleId
+}
+
+
+fragment UserProjectRoleFields on UserProjectRole
+{
+	id
+name
+createdAt
+deletedAt
+updatedAt
+}
+
+
+fragment UserProjectRoleAvgAggregateFields on UserProjectRoleAvgAggregate
+{
+	id
+}
+
+
+fragment UserProjectRoleCountFields on UserProjectRoleCount
+{
 	userProject
-	invitationsSent
-	invitationsReceived
 }
 
-fragment UserCountAggregateFields on UserCountAggregate {
+
+fragment UserProjectRoleCountAggregateFields on UserProjectRoleCountAggregate
+{
 	id
-	_all
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
+_all
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment UserGroupByFields on UserGroupBy {
+
+fragment UserProjectRoleGroupByFields on UserProjectRoleGroupBy
+{
 	id
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment UserMaxAggregateFields on UserMaxAggregate {
+
+fragment UserProjectRoleMaxAggregateFields on UserProjectRoleMaxAggregate
+{
 	id
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment UserMinAggregateFields on UserMinAggregate {
+
+fragment UserProjectRoleMinAggregateFields on UserProjectRoleMinAggregate
+{
 	id
-	email
-	password
-	createdAt
-	deletedAt
-	updatedAt
-	resetToken
-	externalSource
+name
+createdAt
+deletedAt
+updatedAt
 }
 
-fragment UserProjectFields on UserProject {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
 
-fragment UserProjectAvgAggregateFields on UserProjectAvgAggregate {
-	id
-	userId
-	teamSize
-	userProjectRoleId
-}
-
-fragment UserProjectCountAggregateFields on UserProjectCountAggregate {
-	id
-	to
-	_all
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectGroupByFields on UserProjectGroupBy {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectMaxAggregateFields on UserProjectMaxAggregate {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectMinAggregateFields on UserProjectMinAggregate {
-	id
-	to
-	from
-	name
-	userId
-	teamSize
-	createdAt
-	deletedAt
-	updatedAt
-	projectURL
-	description
-	userProjectRoleId
-}
-
-fragment UserProjectRoleFields on UserProjectRole {
-	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
-}
-
-fragment UserProjectRoleAvgAggregateFields on UserProjectRoleAvgAggregate {
+fragment UserProjectRoleSumAggregateFields on UserProjectRoleSumAggregate
+{
 	id
 }
 
-fragment UserProjectRoleCountFields on UserProjectRoleCount {
-	userProject
+
+fragment UserProjectSumAggregateFields on UserProjectSumAggregate
+{
+	id
+userId
+teamSize
+userProjectRoleId
 }
 
-fragment UserProjectRoleCountAggregateFields on UserProjectRoleCountAggregate {
+
+fragment UserRoleMappingFields on UserRoleMapping
+{
 	id
-	_all
-	name
-	createdAt
-	deletedAt
-	updatedAt
+roleId
+userId
+createdAt
+updatedAt
 }
 
-fragment UserProjectRoleGroupByFields on UserProjectRoleGroupBy {
+
+fragment UserRoleMappingAvgAggregateFields on UserRoleMappingAvgAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+roleId
+userId
 }
 
-fragment UserProjectRoleMaxAggregateFields on UserProjectRoleMaxAggregate {
+
+fragment UserRoleMappingCountAggregateFields on UserRoleMappingCountAggregate
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+_all
+roleId
+userId
+createdAt
+updatedAt
 }
 
-fragment UserProjectRoleMinAggregateFields on UserProjectRoleMinAggregate {
+
+fragment UserRoleMappingGroupByFields on UserRoleMappingGroupBy
+{
 	id
-	name
-	createdAt
-	deletedAt
-	updatedAt
+roleId
+userId
+createdAt
+updatedAt
 }
 
-fragment UserProjectRoleSumAggregateFields on UserProjectRoleSumAggregate {
+
+fragment UserRoleMappingMaxAggregateFields on UserRoleMappingMaxAggregate
+{
 	id
+roleId
+userId
+createdAt
+updatedAt
 }
 
-fragment UserProjectSumAggregateFields on UserProjectSumAggregate {
+
+fragment UserRoleMappingMinAggregateFields on UserRoleMappingMinAggregate
+{
 	id
-	userId
-	teamSize
-	userProjectRoleId
+roleId
+userId
+createdAt
+updatedAt
 }
 
-fragment UserRoleMappingFields on UserRoleMapping {
+
+fragment UserRoleMappingSumAggregateFields on UserRoleMappingSumAggregate
+{
 	id
-	roleId
-	userId
-	createdAt
-	updatedAt
+roleId
+userId
 }
 
-fragment UserRoleMappingAvgAggregateFields on UserRoleMappingAvgAggregate {
-	id
-	roleId
-	userId
-}
 
-fragment UserRoleMappingCountAggregateFields on UserRoleMappingCountAggregate {
+fragment UserSumAggregateFields on UserSumAggregate
+{
 	id
-	_all
-	roleId
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingGroupByFields on UserRoleMappingGroupBy {
-	id
-	roleId
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingMaxAggregateFields on UserRoleMappingMaxAggregate {
-	id
-	roleId
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingMinAggregateFields on UserRoleMappingMinAggregate {
-	id
-	roleId
-	userId
-	createdAt
-	updatedAt
-}
-
-fragment UserRoleMappingSumAggregateFields on UserRoleMappingSumAggregate {
-	id
-	roleId
-	userId
-}
-
-fragment UserSumAggregateFields on UserSumAggregate {
-	id
-	externalSource
+externalSource
 }
